@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
-    public float horizontalInput;
+    public float speed = 35.0f;
     void Start()
     {
         
@@ -12,6 +12,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }
